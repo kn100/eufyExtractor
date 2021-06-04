@@ -12,7 +12,7 @@ sudo apt-get install -yq \
     libleptonica-dev
 ```
 
-Then, you'll need to adjust the consts to suit your device. It's pretty simple, all you need to do is:
+Then, you'll need to adjust the consts to suit your device. You might want to check `exampleImage.jpg` in the repo. It's pretty simple, all you need to do is:
 1. measure in pixels from the top of your screenshot to where the top of the date is, and set `DateRowXPos`
 2. measure in pixels from the top of your screenshot to where the bottom of the coloured line appears in the first row of metrics, and set `FirstMetricRowXPos`
 3. measure in pixels from the top of your screenshot to where the bottom of the coloured line appears in the second row of metrics, and set `SecondMetricRowXPos`
