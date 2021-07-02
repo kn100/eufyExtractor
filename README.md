@@ -13,7 +13,6 @@ great, but hopefully someone else gets use out of it!
 See the related blog post: https://kn100.me/taking-back-data-from-eufy/
 
 ## How to use it
-
 Unless you specifically have a Huawei P30, you'll probably need to tweak the
 constants in `python-extractor/main.py`. See `exampleImage.png` for how to get
 these numbers. You'll also want to tweak the Filename regex in the Dockerfile.
