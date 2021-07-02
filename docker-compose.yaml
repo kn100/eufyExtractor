@@ -1,0 +1,12 @@
+version: "3"
+services:
+  backend:
+    build: .
+    ports:
+      - "52525:52525"
+    volumes:
+      - /path/to/import:/app/import
+      - /path/to/database:/app/database
+      - /path/to/eufyLogs:/app/logs
+    environment:
+      - FILENAME_REGEX="^.+com\\.oceanwing\\.smarthome\\.jpg$$"
