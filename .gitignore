@@ -17,4 +17,11 @@
 python-extractor/.venv/
 python-extractor/tests/
 python-extractor/test.sh
-
+import/*
+logs/*
+python-extractor/__pycache__/
+python-extractor/build/
+python-extractor/main.spec
+database/eufyExtractor-data.db
+eufyExtractor
+magic-extractor

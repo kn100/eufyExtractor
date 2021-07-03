@@ -26,8 +26,7 @@ type WeightReturn struct {
 }
 
 func GetPercsAsJSON(db *sql.DB, from, to time.Time) string {
-	// time filtering is broken, so I've disabled it for now.
-	scaleResults, err := models.ScaleResults(qm.OrderBy("date")).
+	scaleResults, err := models.ScaleResults(qm.OrderBy("date"), qm.Where("date BETWEEN ? and ?", from, to)).
 		All(context.Background(), db)
 	if err != nil {
 		panic(err)

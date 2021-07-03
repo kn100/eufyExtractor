@@ -78,7 +78,8 @@ func measurements(w http.ResponseWriter, req *http.Request) {
 		var err error
 		from, err = time.Parse(time.RFC3339, fromString)
 		if err != nil {
-			fmt.Fprint(w, err.Error())
+			w.WriteHeader(http.StatusBadRequest)
+			w.Write([]byte("400 - Bad Request"))
 			return
 		}
 	}
@@ -87,7 +88,8 @@ func measurements(w http.ResponseWriter, req *http.Request) {
 		var err error
 		to, err = time.Parse(time.RFC3339, toString)
 		if err != nil {
-			fmt.Fprint(w, err.Error())
+			w.WriteHeader(http.StatusBadRequest)
+			w.Write([]byte("400 - Bad Request"))
 			return
 		}
 	}
